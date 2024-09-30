@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+nav {
+    background-color: #4CAF50;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    color: blue2;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    display: inline-block; /* Ensures nav items stay in a single line */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    color: #333;
+    margin: 20px 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns the input fields and labels to the left */
+}
+
+label {
+    margin-right: 10px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center; /* Align label and input box in the same line */
+    margin-bottom: 15px;
+}
+
+.side-input {
+    padding: 10px;
+    margin-left: 10px;
+    width: 120px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#output {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+}
