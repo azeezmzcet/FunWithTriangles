@@ -19,7 +19,7 @@ function isTriangle(){
         
     }else{
        // console.log('oh oh the angle doint from trigle');
-        outputE1.innerText="oh oh the angle do nt from trigle"
+        outputE1.innerText="oh oh the angle do not from trigle"
         
         
     }

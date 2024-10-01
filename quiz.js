@@ -9,7 +9,7 @@
 //     let index =  0;
 //     const formResults =new FormData(quizForm);
 //     // console.log(formResults);
-//     for(let value of formResults.values()){ // wht entries 
+//     for(let value of formResults.values()){   // wht entries 
 //         if(value === correctAnswers[index]){
 //             score = score +1; 
 //         // console.log(entry);     
@@ -23,29 +23,44 @@
 
 // submitAnswerBtn.addEventListener("click",calculateScore);
 
+const outputE1 = document.querySelector("#output");
+const quizForm = document.querySelector(".quiz-form");
+const submitAnswerBtn = document.querySelector("#submit-answer-btn");
 
-const quizForm = document.querySelector('.quiz-form');
-const submitAnswerBtn = document.querySelector('#submit-answer-btn');
-const outputE1 = document.querySelector('#output');
+console.log('vvvvvvv');
+
 
 const correctAnswers = ["90°", "right angled"];
+
+submitAnswerBtn.addEventListener("click", calculateScore);
 
 function calculateScore() {
     let score = 0;
     let index = 0;
     const formResults = new FormData(quizForm);
+    console.log('working',formResults);
+    
     
     for (let value of formResults.values()) {
-        if (value.toLowerCase().trim() === correctAnswers[index].toLowerCase()) {
-            score += 1; 
+        if (value === correctAnswers[index]) {
+            score = score + 1; 
+            console.log('qqqq');
+            
         }
-        index += 1;             
+        index += 1;
+        console.log('wwwww');
+                     
     }
     
-    outputE1.innerHTML = "Your score: " + score;
+    outputE1.innerText = "Your score: " + score;
+
+    console.log('eeeeee');
+    
 }
 
-submitAnswerBtn.addEventListener('click', calculateScore);
+
+// console.log('tttttt');
+
 
 
 
